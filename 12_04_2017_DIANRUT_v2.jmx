@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Plan de Pruebas" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="Variables definidas por el Usuario" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Grupo de Hilos" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Controlador Bucle" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1481728877000</longProp>
+        <longProp name="ThreadGroup.end_time">1481728877000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Controlador Simple" enabled="true"/>
+        <hashTree>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Variables definidas por el Usuario" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="valorDocumento" elementType="Argument">
+                <stringProp name="Argument.name">valorDocumento</stringProp>
+                <stringProp name="Argument.value">1098740091</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="valorTipoDocumento" elementType="Argument">
+                <stringProp name="Argument.name">valorTipoDocumento</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="outputFile" elementType="Argument">
+                <stringProp name="Argument.name">outputFile</stringProp>
+                <stringProp name="Argument.value">C:\Users\carlo\Documents\ScriptsConsultasJmeter\ScriptsConRegex\dian.properties</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="dirCaptcha" elementType="Argument">
+                <stringProp name="Argument.name">dirCaptcha</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="73 /WebRutMuisca/DefConsultaEstadoRUT.faces;jsessionid=B2D4FC34EE3284BBBB9840E3191F37C8" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3AmodoPresentacionSeleccionBO" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3AmodoPresentacionSeleccionBO</stringProp>
+                  <stringProp name="Argument.value">pantalla</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3AsiguienteURL" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3AsiguienteURL</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3AmodoPresentacionFormBO" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3AmodoPresentacionFormBO</stringProp>
+                  <stringProp name="Argument.value">pantalla</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3AmodoOperacionFormBO" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3AmodoOperacionFormBO</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3AmantenerCriterios" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3AmantenerCriterios</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3AnumNit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3AnumNit</stringProp>
+                  <stringProp name="Argument.value">${valorDocumento}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3AbtnBuscar.x" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3AbtnBuscar.x</stringProp>
+                  <stringProp name="Argument.value">22</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3AbtnBuscar.y" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3AbtnBuscar.y</stringProp>
+                  <stringProp name="Argument.value">10</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="com.sun.faces.VIEW" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">com.sun.faces.VIEW</stringProp>
+                  <stringProp name="Argument.value">H4sIAAAAAAAAAN1cWYwcx3nuGZ67oijJtKkoEqWmKHElmDs7B4%2B9peUu6d1kD3p3yRxOMK6ZrpltqqerWV09nKUkQ3aA%2BMEPCWAbcALZsgE%2F2U5ehBwGbNgGHwwEcAAb9osfEsd5CAL4SJyH2HlJ%2Fr%2F6mO6ZntntYU9EcoDt7enu%2Bqv%2B7z%2Fr76r52s%2BVQzZXphmv58hN0jp%2F067liGUZepUInZm5Bbi4JYiga8Qkdcpf2OaUbgnuCIfTdabRT%2FzZLz93t3Zm5JiitKw7inJQUc5EqFVZw2ImNYWkdUOntzcZE8pIuemfup%2BMMnaTNEkrVyNVaoeaXV9ZJw3drC8yUxDdpFw52dRtQeC77RiCXIFzjW1e3%2FYIHVIuV1muzpo5TSdmruHodpXkCL%2Fl6IJWYdwkd5tWcpGxQYdLy6JhXCMmNT7EdU05WNa1vOJ%2FrgxMccMRliOuMt4gQhItDoNoKSA6NzBRJKd8oAbHXsiOKEsDU18xYcTLuqZRU3m6wTR2jVMb7pMqqNkWNWgVTy5vBIyk09UxW687Ot68vrmaMu2TnWwggqlzcAJ72bAoH14XTzQI3ADLWuTQkOvMDjpYSN6BdAJeL2vUtMlNakslPR9QTctAL3j0DqZG8WLgjRbv0Tq3acu1zUupsz2ZOttTAcVU2D4EJAv5FPiWWipJHjadxrouAprpjbOQLs2s1kxV4HKMftAYTZHvUrp8P8LJHfDkrKoTQ1HcTCBtUZ1Pd8jHLa43KF%2BwqGHoGhuCbl1Il%2BZjNq07psaGOOKL6dI85kK8zhoVTocw3EspD5cJzmx3tO0gmJoZtx13eghMpY9qMZ8OTekEIoRT9rWHqcxQUxdU0fe3KQqqmLK%2FlTRTdoiSZso%2BS9Jse5XURNS2%2FJTmUZLqZPoD9Q30gHJ1YJKLrAE5unbZEYKZykhFmJcdaM2D0aZFGkdcapv%2F4PMLj%2ByqDk4g85r5mjJqmK%2Bt6g1LD406LYxLvl%2FJpqkMpdSn6pJqaShUA0%2FQcrhy4iOrWEvJGcSs5zYqN4HczJ%2F%2F4%2B%2B%2F87j9spHFQg1C5dxSPgaAxZ8dDM6O2lx5QlJzhG7klom9s0asQ0d%2B%2FJ27Jz%2F6%2FQNK9iqIlhHtKqkKxleUEbEDsXOHGVrLeuVVOaRjt4%2FC8XH4ywjlhXCVBxgklpVbvL65eWV9u3xj5crvlTc3Nrax89GWFS4Thc%2BDIUkGLzNmUGJ%2BT%2BVv%2Fejt%2F%2FlFVsn8oXKoSQyHtqyMjaQeVSygNbq8vbZavrywtbIolKcnlmitq9CRAxapDeQfb3O8yqrEoB%2F79RMffTv%2Fm59llYMrytEdQKHKNLqqHKkyxxR8Vyjvk5hP4JAmtgTXzfrMqnIUvzqkTnEYJ%2BDxJuEgbSG%2Ftqz%2FhQ9MGa5swQFimaIEsB%2FCk8fkwWqfBrczMTI7Knk9Gge6Ggf6xtq1jXWEfWVpC1g%2B0WZ5gXOyu6rbovXxH5z6i%2B%2BSzx9QMivKQVu%2FQ6XuHLqNyf2oO7%2FNe3UtrxIletSQfD1toVh7VPB63kDGjrtgWG2IYjB4bm808PIpefNZ%2FBpmpSAH93T8GKaRV2ymtkcjXEXxkUWHZFlR7VwBq61T%2Fr6ffvHL%2F%2F3xT05mEUlPO301k8%2BtO40K5X%2F6tc%2BeeuQzP%2FmUtNK3YGQe05YccN4f%2F3Er9tNWDysGm8PB2YE9UVL2AKKIzU6HgTiNjopTU6McnFTYQW3Ki5SDDR54Z1aQikFV24HwwHfnxsbUqkFse27MIppGtXF5e0y9rWtiZ26skM%2B%2FOKbaYtegc2MVxoHOdH5mbP7R0ZGREdX%2FwPmsqDBtt%2Fs63OAxV%2BGy5nfc0OvELlvEDDqqMVOM10hDN3anF8BcjXPqMjWaVOhVck61iWmP25TrtRlVPolmMV0oWq24gWFfNhCP9qYxgGRs%2Fqx%2BywGzn1k6y0jVEXQGrqpwge2%2BMq3OTmC7%2FVLUTb2qs7H5WaKC%2F63NjbkXcjsQLdJgbEWSm50g88nGZVOLcNAbPjb%2Fhs9S3PAFbYzNX7cdguVHldM6qB62s3t3NzshtDiJT8SKfB%2BKICNwmXBKyhYFyZikh0B3CvOeVaAmq%2B4sRMX4ASzCzfhGxflNly2m3v1LgJOp21yvOAJZzkG74lCZ9FQAzQxC07hBa2J6Mm%2B11NOQlDEuICiBmINQczzsTpQhe5MSNnu%2B7U3wMGPJuPfk%2Fkd0MqnvH%2FF9f78XEiL6DkH0KvuL2Eq9iCmuu7HmvPvvgjfxmPLioxuCzvXAKjayIjtnwq74qYgrxoG0XTAmQqdDb%2FgmWuO3b98eR8LjDjeoiWmN1juyjPRNG9tpyWgi9QiR6shevUzqr35w49%2F%2B%2FdTrH%2FKzV8hp3CDa7hrC7tn4N4jyBeYyZKSUb5Em5X%2FwD%2B%2FOffrt761lleyqMiKtf500%2FBRt1IZnNNkmmtR5iTTK5zQQz9mO6XVFjdwNHMxl3UTjWmlYhlDGq13ZZV81W04i8%2Bk%2BpJCP3wnrw9MRfXBf%2BoQ0op1etm0tlH16ucejSl%2FjS1UH8Kzs2ysJiRjPqnioCeXZbnyjhjqVCNBwW%2Bzhd6M46A8uUC%2FtrYi%2Bs1q8Jx10qWCvqw8NeC%2FGg9fl5l9NjFwHCexv7aGB7UwMbN1xcD4ZaJ0EsK%2F1IUHWnmof2V96U0jECyYASGwj7KdPRfy0%2F%2B488NTBo7EHN05DUmHAOCIo7JE2JZ4yHwxPmS%2B6%2Fya9NOaSX0dtDYTJBezjWlRiE6HJr5wOHxdKBrrN5L3rbyntaXLHB9Iv7MsxMMcuuwk%2BXj1wMZ%2BPqXWlVUe4NBj3F5HY3%2B7FPR6%2BgYdv7of%2F93fxXxaaqx3f7ltNuodMPzHjl5DYd8OmEE1h8UVCqIqgvHyNcbVGmnC0nQbMdGFSRVUDJo5BFLdVjQjXRfg0j1WZgXPJ6WLLmtmfF7g32%2FBy%2BkLR%2B%2B8bSXEw9ZjETv6uh3qElWAfavFIaLIbTu9TsYUABHcdSLB4w19wIRdJDIbBFPbxT3tjIJQP1pipsW1dOAZbhcnuwk1HEjondItd1Q2yjsUp4wblGg0s7GDIlfacAsVhNKi1JI2rJ7kjyg0vMsAMqUKNsonIFpMiWZC1zJ9FofyhFzj8Wuu%2BjORIjKYMN7v4re7swtewUiIc3FZI9efxQPTNI6JRNlCicDz2P%2B3ngsce82LZqKx1Thcu5GekaY5wrD1xXWMYqGB4e9U9UtS9rERdKEdd10u19jMRAXwgRg21ZuSRZ7plpDXV03Oq6RjGIPpaQMK%2FSEFfU8cLDplneyD1%2FjgYkgA1kQgorYlUf9kPJdAwV%2BOm8sOKgqORAFCKLg7z13J1rb%2Fy10x1r3Py1yZ1rCfy1wB1rNuRkSW5fslXGv%2B8d2jBf7%2FaT8TAO9%2BO8YjvkSY%2BF2OzUixlW8ol8vCHu5UyJEJfO9WzZ9UYVyzFsMgalkEFU%2BcGN3msC2fmHjSTP9UXu6HDPJkI5lB3yNP8vsDO3D9gPx%2Bj1a6PKBPPe%2ByFeAeQfUEPS%2BceFBvn%2FplXHjTFjinqRLH7SP6Phw72TCKwoxEGmXv1QdPwMzEa7sXH%2B1nFsZSTWXj4VLwwfBWfTfbiIporIXeXHzQdV3t7cRfN%2B1DBsVqXWXz4FLw4fAVP9mYunPIja0sPg3bLCYuv3PehdmNJNnPl4dPu0v2m3eGZK7J2NQXtvseK7ZS%2FDcTftRHstBhwai0r1z%2BJMrb31FqKez9T6yEXZPcx44sx8BqtlklVOB0zvtTLYlgRz%2FzHg2aoMXNkAGyHLAwfsSIWvjP%2F2YmY26dQXoyuITKblIvcEhF0G6LQovud8jZWQjmi0RqBbsA0Tmja%2BNra%2BC581OXl6UZjWvr27FP4YlYDIve5WJ6KUWTX8vdaFCFoSzD3673IBou8mV89BNocwmMg6JK9x3BlhEP8r%2Fc8fBRL%2FuY0f0OZvwlssOhRlIXZf0kaPfa1Tv7%2F4VVeSGkiL7Eyf9StCbpGvS%2F%2BQmFIKgrFUiFfKk2pb7wRk4H0aXI%2BD00eHVVjPiMjySgVkndeTK3z84k7RxVMrmdYbc52T%2BiEQoIeIDzpTTatLjIO6ZqFq%2FhVIhcerK9sq7ccqtpUpWbVoabgxFSbet1djEBN1SBqhcBtaCKXJuAJXFtaWVjPvZfurZ%2BSKhOJcJ%2B6OAjuWAzNdk%2FqRMYMethybIuamq71xL7q7BJVN%2B0q162qfvddMyIJVVBc5E6MBopDtX1y5JwKl1XcWGKqNx1Nl5k8U4nmrSohIG8CkqoauIuByKeJIxiHtpqKS4ypkCQZjICY4MEbFLfzwRXAQRfYVm3ingq9SoJxIai4vlhqDOiApnNcvIt3dROB8ruihscTTERMptIWjAn7wnMbnrB13EzjVIA4NxhqGbTQWAP4MHQWEGM59aUFSGPUwgUYj6Eu0SrHuU3x%2FMU8DrCYL5RefliUEONOciXEcmW2e74rlFrQg7pIzCo1SG8l7HYAukmky3hwPUAlWZiaTOyspy4MIi%2BsvmW758oiw1AQ60zlNLAcgH5NLnfqkJshhaa5K8eqhrduDIVoojk3LLjEmYnsoJxYxdDrnhFDI5d8RedS4mh4MDa4YSJ3HlHLIHdQ9rbc1lbFSr33bGCClyYn8WlSZ7ZgrjHmz6u70vzBpHFfjrT3qF65M0v9DqaXOVUFbDwVhCctpvG7XzIBAfkEV03drDsmcRu545ceCnhqOzr3uvB3JBF1h8CoJRoSCuLigKyEkUiuuHtnl8pgeaJcRfj3PfJExcsTj1uhK71yRNzL070ZrLPskMquqORsymLK16NszuCYD81OVHiCHVyJ0%2FwDfprf%2FgECb9dSXoT39w%2BY58u1fR%2FeO89vy69XhQhGCEYOCgrUwygciEHhVIzs%2BuykPuaWBxfkXhuh%2FDZMmHNLiw0NLiBXvnvbdESspwW89Aap0x7O9grOv%2BUDJsy%2FHW6UScVmBlhkcPXNM69HHnJPyhUmGBw9oVxMBH4gTfSpn28LoHPnkPsbEcFCXL9i8nzXZqg1KnaYFtoN1Z5wgaJgdIiZGT%2FRFTVAjs%2Bdeb07mLQJvBlaWCeUwy4XVnTxu1wFDb7W4ZCPg0fUCF%2FXxUsvz3TUE8PPH7adSkMXfc0nkeIgsl%2FBw1d7VRiyf32rT4XhapdicMhEMDndn2IYrmUOtbBWwsJa9gsRA86%2B24VuJ9ZPemMDiXhSqhHDpr3Fg2S%2F2Vc0zwwiGuVJdFuXEnHd9nlI5Z2w6agR0wl%2BDsV8rcN%2BsOHfhO3jSJysOufQcbbywTOv7%2FVUzqP9ZgekMR%2FcSUJrIlIuSSWKZMPFolLR%2F1WUwYJGSa4K3dwr6ONhv3sm8PK3OmN9KvsiknOHpa%2FsT2Ni%2FZ%2Bo7lbvuPqK3NLubnWYGysGP7AQtxGkDDNE3ErFx%2Ba9jeYx5CZ69LT%2FTGO4M5R2MswXV1au55qQJ%2BsNzObZFrVlmE6OvCwG%2FWsM8mdnZY1BzHtl8hvt3sCDzU54d4cFDozgmT4b6eWmshdihr0S%2F0MCsb8jABe7f00Dr%2BIkphdn1v8BwtRDPExaAAA%3D</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="vistaConsultaEstadoRUT%3AformConsultaEstadoRUT" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">vistaConsultaEstadoRUT%3AformConsultaEstadoRUT</stringProp>
+                  <stringProp name="Argument.value">vistaConsultaEstadoRUT%3AformConsultaEstadoRUT</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3A_idcl" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">vistaConsultaEstadoRUT%3AformConsultaEstadoRUT%3A_idcl</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">devolucion.dian.gov.co</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/WebRutMuisca/DefConsultaEstadoRUT.faces;jsessionid=B2D4FC34EE3284BBBB9840E3191F37C8</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">Java</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://devolucion.dian.gov.co/WebRutMuisca/DefConsultaEstadoRUT.faces</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de PrimerApellido" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">PrimerApellido</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;span id=&quot;vistaConsultaEstadoRUT:formConsultaEstadoRUT:primerApellido&quot;&gt;(.*?)&lt;\/span&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de SegundoApellido" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">SegundoApellido</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;span id=&quot;vistaConsultaEstadoRUT:formConsultaEstadoRUT:segundoApellido&quot;&gt;(.*?)&lt;\/span&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de PrimerNombre" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">PrimerNombre</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;span id=&quot;vistaConsultaEstadoRUT:formConsultaEstadoRUT:primerNombre&quot;&gt;(.*?)&lt;\/span&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de OtrosNombres" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">OtrosNombres</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;span id=&quot;vistaConsultaEstadoRUT:formConsultaEstadoRUT:otrosNombres&quot;&gt;(.*?)&lt;\/span&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de Digito" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">Digito</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;td class=&quot;tipoFilaNormalVerde&quot;&gt;&lt;span id=&quot;vistaConsultaEstadoRUT:formConsultaEstadoRUT:dv&quot; style=&quot;width:90;&quot;&gt;(.*?)&lt;/span&gt;&lt;/td&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de Estado" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">Estado</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;span id=&quot;vistaConsultaEstadoRUT:formConsultaEstadoRUT:estado&quot;&gt;(.*?)&lt;\/span&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de Registro" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">Registro</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;\/td&gt;&lt;td&gt;El NIT 28044913no es válido\. (.*?)&lt;\/td&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <BeanShellListener guiclass="TestBeanGUI" testclass="BeanShellListener" testname="BeanShell Listener" enabled="true">
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="script">import co.test.FileProperties;
+FileProperties f=new FileProperties(vars.get(&quot;outputFile&quot;));
+String registro = vars.get(&quot;Registro&quot;);
+if(registro == null){
+	f.addLine(&quot;persona.primerNombre=&quot;+vars.get(&quot;PrimerNombre&quot;));
+	f.addLine(&quot;persona.segundoNombre=&quot;+vars.get(&quot;OtrosNombres&quot;));
+	f.addLine(&quot;persona.primerApellido=&quot;+vars.get(&quot;PrimerApellido&quot;));
+	f.addLine(&quot;persona.segundoApellido=&quot;+vars.get(&quot;SegundoApellido&quot;));
+	f.addLine(&quot;dian.digitoVerificacion=&quot;+vars.get(&quot;Digito&quot;));
+	f.addLine(&quot;dian.estado=&quot;+vars.get(&quot;Estado&quot;));
+	f.addLine(&quot;test.statusCode=&quot;+prev.getResponseCode());
+	f.addLine(&quot;test.statusMessage=&quot;+prev.getResponseMessage());
+}else{
+	f.addLine(&quot;dian.registro=&quot;+registro);
+}
+f.close();</stringProp>
+          </BeanShellListener>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Ver Árbol de Resultados" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Reporte resumen" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Informe Agregado" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
